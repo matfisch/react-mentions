@@ -29,7 +29,12 @@ function MultipleTriggers({ value, data, onChange, onAdd }) {
           trigger="@"
           data={data}
           renderSuggestion={(suggestion, search, highlightedDisplay) => (
-            <div className="user">{highlightedDisplay}</div>
+            <div style={{ display: 'flex', 'align-items': 'center' }}>
+              <img src="https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg" alt="funny cat" height="24" width="24" style={{ 'margin-right': '0.8rem'}}/>
+              <span>{suggestion.display}</span>
+              <span style={{ 'margin': '0 0.8rem' }}>.</span>
+              <span>username</span>
+            </div>
           )}
           onAdd={onAdd}
           style={defaultMentionStyle}
